@@ -50,6 +50,7 @@ void searchFruitName(Fruit *f, int count)
 	{
 		if(strcmp(search,f[i].name) == 0)
 		{
+			if(f[i].price == -1) continue;
 			printf("\nNo Name Price Weight Star The number of Stars\n");
 			printf("=============================================\n");
 			printf("%2d ", i+1);
@@ -68,6 +69,7 @@ void searchPrice(Fruit *f, int count)
 	{
 		if(search == f[i].price)
 		{
+			if(f[i].price == -1) continue;
 			printf("\nNo Name Price Weight Star The number of Stars\n");
 			printf("=============================================\n");
 			printf("%2d ", i+1);
@@ -86,6 +88,7 @@ void searchWeight(Fruit *f,int count)
 	{
 		if(f[i].weight == search)
 		{
+			if(f[i].price == -1) continue;
 			printf("\nNo Name Price Weight Star The number of Stars\n");
 			printf("=============================================\n");
 			printf("%2d ", i+1);
