@@ -14,9 +14,10 @@ int loadFruit(Fruit *f,int *count)
 	{
 		return -1;
 	}
-	while(!feof(pp))
+	while(1)
 	{
 		fscanf(pp, "%s %d %d %d %d",f[i].name, &f[i].weight, &f[i].price, &f[i].star, &f[i].starnum);
+		if(feof(pp)) break;
 		i++;
 	}
 	*count = i;
